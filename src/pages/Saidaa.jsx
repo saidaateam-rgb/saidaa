@@ -136,7 +136,7 @@ const Saidaa = () => {
                                     <div className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 bg-black">
                                         <div className="h-full flex flex-col justify-end p-4 text-white">
                                             <p className="text-xs font-bold leading-tight mb-2">{member.name}</p>
-                                            <p className="text-[10px] italic leading-tight opacity-70 border-t border-white/20 pt-2">{member.quote}</p>
+                                            <p className="text-[10px] leading-tight opacity-70 border-t border-white/20 pt-2">{member.quote}</p>
                                         </div>
                                     </div>
                                 </div>

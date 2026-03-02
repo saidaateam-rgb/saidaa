@@ -71,10 +71,13 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Pretendard', sans-serif !important;
   }
 
+  html,
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Pretendard', sans-serif !important;
   }
 }
 
