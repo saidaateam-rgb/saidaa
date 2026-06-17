@@ -1,7 +1,9 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/routerCompat';
 import { useTranslation } from 'react-i18next';
 
 // Expanded projects data (20 items) with example diagrams

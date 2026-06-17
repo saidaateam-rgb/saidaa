@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from '@/lib/routerCompat';
 import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
