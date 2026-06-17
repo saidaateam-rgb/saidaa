@@ -1,65 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const images = [
-    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2070&auto=format&fit=crop',
-];
+import React from 'react';
 
 const Home = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 4000); // Change image every 4 seconds
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
-        <div className="fixed inset-0 top-0 left-0 w-full h-screen overflow-hidden">
-            {/* Carousel Background Images - Slide from right to left */}
-            <AnimatePresence initial={false}>
-                <motion.div
-                    key={currentIndex}
-                    initial={{ x: '100%' }}
-                    animate={{ x: 0 }}
-                    exit={{ x: '-100%' }}
-                    transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="absolute inset-0 w-full h-full"
-                >
-                    <img
-                        src={images[currentIndex]}
-                        alt="Architecture"
-                        className="w-full h-full object-cover"
-                    />
-                    {/* Overlay for better text visibility */}
-                    <div className="absolute inset-0 bg-black/20"></div>
-                </motion.div>
-            </AnimatePresence>
-
-            {/* Vertical SAIDAA Text - Rotated 180 degrees, fills viewport height */}
-            <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-                className="absolute left-0 top-0 h-full hidden md:flex items-center z-10"
-            >
-                <h1
-                    className="text-[15vh] lg:text-[25vh] xl:text-[30vh] font-bold tracking-tighter leading-[0.8]"
-                    style={{
-                        writingMode: 'vertical-rl',
-                        textOrientation: 'mixed',
-                        transform: 'rotate(180deg)',
-                        color: 'white',
-                    }}
-                >
-                    SAIDA<span className="text-green-500">A</span>
+        <div className="min-h-screen w-full bg-[#181818] text-white flex items-center justify-center px-6 text-center">
+            <div className="max-w-2xl">
+                <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+                    홈페이지 리뉴얼 중입니다.
                 </h1>
-            </motion.div>
+                <p className="mt-4 text-sm md:text-base text-white/70">
+                    더 나은 모습으로 곧 찾아뵙겠습니다.
+                </p>
+            </div>
         </div>
     );
 };

@@ -58,10 +58,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link
                     to="/"
-                    className={cn(
-                        "hover:opacity-80 transition-opacity flex",
-                        isHome && "md:hidden"
-                    )}
+                    className="hover:opacity-80 transition-opacity flex"
                 >
                     <img
                         src={isHome ? "/logo-black.png" : "/logo-white.png"}
@@ -71,7 +68,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Navigation Container */}
-                <div className={cn("hidden md:flex items-center gap-8", isHome && "ml-auto")}>
+                <div className="hidden md:flex items-center gap-8">
                     <nav className="flex space-x-8">
                         {navItems.map((item) => (
                             <Link
