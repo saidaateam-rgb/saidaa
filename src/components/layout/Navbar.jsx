@@ -27,6 +27,7 @@ const Navbar = () => {
     const location = useLocation();
     const dropdownRef = useRef(null);
     const isHome = location.pathname === '/';
+    const isRenewalMode = true;
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -77,8 +78,11 @@ const Navbar = () => {
                                 className={cn(
                                     'text-sm font-medium transition-colors hover:text-green-500',
                                     isHome ? 'text-white' : 'text-foreground',
-                                    location.pathname === item.path && 'font-bold'
+                                    location.pathname === item.path && 'font-bold',
+                                    isRenewalMode && 'pointer-events-none cursor-not-allowed opacity-50 hover:text-inherit'
                                 )}
+                                aria-disabled={isRenewalMode}
+                                tabIndex={isRenewalMode ? -1 : 0}
                             >
                                 {t(item.key)}
                             </Link>
@@ -155,9 +159,16 @@ const Navbar = () => {
                                     to={item.path}
                                     className={cn(
                                         'text-2xl font-bold tracking-tighter hover:text-green-500 transition-colors',
-                                        location.pathname === item.path && 'text-green-600'
+                                        location.pathname === item.path && 'text-green-600',
+                                        isRenewalMode && 'pointer-events-none cursor-not-allowed opacity-50 hover:text-inherit'
                                     )}
-                                    onClick={() => setIsOpen(false)}
+                                    aria-disabled={isRenewalMode}
+                                    tabIndex={isRenewalMode ? -1 : 0}
+                                    onClick={() => {
+                                        if (!isRenewalMode) {
+                                            setIsOpen(false);
+                                        }
+                                    }}
                                 >
                                     {t(item.key)}
                                 </Link>
