@@ -17,21 +17,21 @@ const WorksReal = () => {
                             transition={{ duration: 0.4 }}
                             className="group cursor-pointer"
                         >
-                            <div className="aspect-[4/3] overflow-hidden bg-white mb-4 relative">
+                            <div className="relative aspect-[4/3] overflow-hidden bg-white">
                                 <img
                                     src={project.thumbnail}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                                    className="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
                                 />
                                 {project.hoverImage && (
                                     <img
                                         src={`${project.hoverImage}?v=diagram2`}
                                         alt=""
-                                        className="pointer-events-none absolute inset-0 h-full w-full object-contain bg-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                                        className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain bg-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                                     />
                                 )}
                             </div>
-                            <h3 className="font-bold text-[11px] md:text-sm leading-tight tracking-tight">
+                            <h3 className="mt-1 text-right font-bold text-[11px] leading-tight tracking-tight md:text-sm">
                                 {project.title}
                             </h3>
                         </motion.div>
