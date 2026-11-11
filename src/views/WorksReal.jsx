@@ -21,13 +21,13 @@ const WorksReal = () => {
                                 <img
                                     src={project.thumbnail}
                                     alt={project.title}
-                                    className="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                                    className="h-full w-full object-cover"
                                 />
                                 {project.hoverImage && (
                                     <img
-                                        src={`${project.hoverImage}?v=diagram2`}
+                                        src={`${project.hoverImage}?v=diagram3`}
                                         alt=""
-                                        className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain bg-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                                        className="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 object-contain opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                                     />
                                 )}
                             </div>
