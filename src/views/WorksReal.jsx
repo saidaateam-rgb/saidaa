@@ -21,7 +21,7 @@ const WorksReal = () => {
                                 <img
                                     src={project.thumbnail}
                                     alt={project.title}
-                                    className="h-full w-full object-cover"
+                                    className="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
                                 />
                                 {project.hoverImage && (
                                     <img
@@ -31,7 +31,7 @@ const WorksReal = () => {
                                     />
                                 )}
                             </div>
-                            <h3 className="mt-1 text-right font-bold text-[11px] leading-tight tracking-tight md:text-sm">
+                            <h3 className="mt-1 text-left font-bold text-[11px] leading-tight tracking-tight md:text-sm">
                                 {project.title}
                             </h3>
                         </motion.div>
