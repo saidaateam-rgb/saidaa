@@ -29,7 +29,7 @@ const Navbar = () => {
     const location = useLocation();
     const dropdownRef = useRef(null);
     const isHome = location.pathname === '/';
-    const isRenewalMode = true;
+    const isRenewalMode = false;
 
     useEffect(() => {
         const handleClickOutside = (event) => {

@@ -7,7 +7,7 @@ import Providers from './providers';
 export const metadata = {
     metadataBase: new URL('https://saidaa.kr'),
     title: 'SAIDAA | 자연과 사람을 연결하는 건축·연구 스튜디오',
-    description: 'SAIDAA는 건축과 연구를 통해 사람과 자연을 다시 연결합니다. 현재 홈페이지 리뉴얼을 진행 중이며, 더 나은 모습으로 곧 찾아뵙겠습니다.',
+    description: 'SAIDAA는 건축과 연구를 통해 사람과 자연을 다시 연결하는 스튜디오입니다. 프로젝트, 연구, 소식을 한 곳에서 확인할 수 있습니다.',
     icons: {
         icon: '/favicon.svg',
         shortcut: '/favicon.svg',
@@ -16,7 +16,7 @@ export const metadata = {
     openGraph: {
         type: 'website',
         title: 'SAIDAA | 자연과 사람을 연결하는 건축·연구 스튜디오',
-        description: 'SAIDAA는 건축과 연구를 통해 사람과 자연을 다시 연결합니다. 현재 홈페이지 리뉴얼을 진행 중이며, 더 나은 모습으로 곧 찾아뵙겠습니다.',
+        description: 'SAIDAA는 건축과 연구를 통해 사람과 자연을 다시 연결하는 스튜디오입니다. 프로젝트, 연구, 소식을 한 곳에서 확인할 수 있습니다.',
         images: [
             {
                 url: '/og-main-thumbnail.png',
@@ -29,7 +29,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'SAIDAA | 자연과 사람을 연결하는 건축·연구 스튜디오',
-        description: 'SAIDAA는 건축과 연구를 통해 사람과 자연을 다시 연결합니다. 현재 홈페이지 리뉴얼을 진행 중이며, 더 나은 모습으로 곧 찾아뵙겠습니다.',
+        description: 'SAIDAA는 건축과 연구를 통해 사람과 자연을 다시 연결하는 스튜디오입니다. 프로젝트, 연구, 소식을 한 곳에서 확인할 수 있습니다.',
         images: ['/og-main-thumbnail.png'],
     },
 };

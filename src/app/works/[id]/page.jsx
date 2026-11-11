@@ -1,5 +1,5 @@
-import WorksDetail from '@/views/WorksDetail';
+import WorksDetailReal from '@/views/WorksDetailReal';
 
 export default function WorksDetailPage() {
-    return <WorksDetail />;
+    return <WorksDetailReal />;
 }
